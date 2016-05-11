@@ -1,0 +1,39 @@
+html, body {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #3B3F40;
+}
+
+.planmock {
+	position: absolute;
+	width: 200px;
+	height: auto;
+	left: 30%;
+	top: 30%;
+}
+
+/* .svg {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+
+.path {
+	stroke-dasharray: 20;
+	animation: dash 50s linear;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+} */
