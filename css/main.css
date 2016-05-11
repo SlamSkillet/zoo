@@ -15,13 +15,11 @@ html, body {
 	top: 30%;
 }
 
-/* .svg {
-	position: absolute;
-	top: 30%;
-	left: 30%;
+#svg {
+	visibility: hidden;
 }
 
-.path {
+/* .path {
 	stroke-dasharray: 20;
 	animation: dash 50s linear;
 }
