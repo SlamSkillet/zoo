@@ -19,23 +19,8 @@ html, body {
 	visibility: hidden;
 }
 
-#svg2 {
-	visibility: hidden;
+#canvas {
+	position: absolute;
+	left: 20%;
+	top: 15%;
 }
-
-/* .path {
-	stroke-dasharray: 20;
-	animation: dash 50s linear;
-}
-
-@-webkit-keyframes dash {
-  to {
-    stroke-dashoffset: 1000;
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 1000;
-  }
-} */
