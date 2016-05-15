@@ -96,8 +96,10 @@ $(function() {
 			toggle1 = 1 - toggle1;
 		}
 		console.log('repeated');
+		paper.view.update();
 	}
 
+paper.view.update();
 	// console.log(project.exportJSON());
 
 });
