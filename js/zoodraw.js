@@ -12,8 +12,8 @@ console.log(path2.children[40]);
 console.log(path2.children[45]);
 console.log(path2.children[49]);
 
-// // gate 1
-// path2.children[40].fullySelected = true;
+// // gate 1 
+path2.children[40].strokeWidth = 2;
 
 // // gate 2
 // path2.children[45].fullySelected = true;
@@ -21,15 +21,34 @@ console.log(path2.children[49]);
 // // gate 3
 // path2.children[49].fullySelected = true;
 
+var toggle1 = 0;
+var toggle2 = 0;
+var toggle3 = 0;
+
+path2.children[40].onMouseDown = function(event) {
+	
+	if (toggle1 == 0){
+		path2.children[40].segments[0].point.x += 10;
+		path2.children[40].segments[0].point.y += 10;
+		toggle1 = 1 - toggle1;
+	}
+	else {
+		path2.children[40].segments[0].point.x -= 10;
+		path2.children[40].segments[0].point.y -= 10;
+		toggle1 = 1 - toggle1;
+	}
+	console.log(toggle1);
+}
+
 function onFrame(event) {
-	path2.children[40].segments[0].point.x += 0.1;
-	path2.children[40].segments[0].point.y += 0.1;
+	// path2.children[40].segments[0].point.x += 0.1;
+	// path2.children[40].segments[0].point.y += 0.1;
 
-	path2.children[45].segments[0].point.x += 0.1;
-	path2.children[45].segments[0].point.y += 0.1;
+	// path2.children[45].segments[0].point.x += 0.1;
+	// path2.children[45].segments[0].point.y += 0.1;
 
-	path2.children[49].segments[0].point.x += 0.1;
-	path2.children[49].segments[0].point.y += 0.1;
+	// path2.children[49].segments[0].point.x += 0.1;
+	// path2.children[49].segments[0].point.y += 0.1;
 } 
 
 // function onFrame(event) {
