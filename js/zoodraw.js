@@ -28,7 +28,7 @@ path2.children[40].onMouseDown = function(event) {
 		path2.children[40].segments[0].point.y -= 10;
 		toggle1 = 1 - toggle1;
 	}
-	globalFunction();
+	emitGate1();
 }
 
 path2.children[45].onMouseDown = function(event) {
@@ -61,5 +61,18 @@ path2.children[49].onMouseDown = function(event) {
 
 function onFrame(event) {
 } 
+
+function repeatGate1() {
+	if (toggle1 == 0){
+		path2.children[40].segments[0].point.x += 10;
+		path2.children[40].segments[0].point.y += 10;
+		toggle1 = 1 - toggle1;
+	}
+	else {
+		path2.children[40].segments[0].point.x -= 10;
+		path2.children[40].segments[0].point.y -= 10;
+		toggle1 = 1 - toggle1;
+	}
+}
 
 // console.log(project.exportJSON());

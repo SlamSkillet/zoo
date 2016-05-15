@@ -23,20 +23,20 @@ app.get('/js/paper-full.min.js', function(req, res) {
     res.sendfile(__dirname + '/js/paper-full.min.js');
 });
 
-app.get('/js/zoodraw.js', function(req, res) {
-    res.sendfile(__dirname + '/js/zoodraw.js');
-});
+// app.get('/js/zoodraw.js', function(req, res) {
+//     res.sendfile(__dirname + '/js/zoodraw.js');
+// });
 
 // sockets
-// io.sockets.on('connection', function(client){
+io.sockets.on('connection', function(client){
 
-// 	// have to emit something to tell local person to addcube
-// 	io.sockets.emit('newconnection'); 
+	// have to emit something to tell local person to addcube
+	io.sockets.emit('newconnection'); 
 
-// 	client.on('mousedown', function(){
+	client.on('mouseDownGate1', function(){
 
-// 		client.broadcast.emit('repeatrotate');
+		client.broadcast.emit('repeatGate1');
 
-// 	}); 
+	}); 
 
-// });
+});
