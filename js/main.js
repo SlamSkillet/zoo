@@ -51,6 +51,7 @@ $(function() {
 			toggle1 = 1 - toggle1;
 		}
 		emitGate1();
+		flowSwap();
 	}
 
 	path2.children[45].onMouseDown = function(event) {
@@ -96,10 +97,31 @@ $(function() {
 			toggle1 = 1 - toggle1;
 		}
 		console.log('repeated');
+		
+		if (toggle1 == 1) {
+				$('#path2').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'visible');
+		}
+		else {
+				$('#path2').css('visibility', 'visible');
+				$('#path1').css('visibility', 'hidden');
+		}
+
 		paper.view.update();
 	}
 
-paper.view.update();
+	function flowSwap() {
+		if (toggle1 == 1) {
+				$('#path2').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'visible');
+		}
+		else {
+				$('#path2').css('visibility', 'visible');
+				$('#path1').css('visibility', 'hidden');
+		}
+	}
+
+	paper.view.update();
 	// console.log(project.exportJSON());
 
 });

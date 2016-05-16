@@ -24,3 +24,30 @@ html, body {
 	left: 20%;
 	top: 15%;
 }
+
+#path1 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: hidden;
+  animation: dashone 500s linear;
+}
+
+#path2 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: visible;
+	animation: dashtwo 500s linear;
+}
+
+@-webkit-keyframes dashone {
+  to {
+    stroke-dashoffset: 10000;
+  }
+}
+
+@-webkit-keyframes dashtwo {
+  to {
+    stroke-dashoffset: 10000;
+  }
