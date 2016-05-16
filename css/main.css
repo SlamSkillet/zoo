@@ -41,6 +41,17 @@ html, body {
 	animation: dashtwo 500s linear;
 }
 
+@keyframes dashone {
+  to {
+    stroke-dashoffset: 10000;
+  }
+}
+
+@keyframes dashtwo {
+  to {
+    stroke-dashoffset: 10000;
+  }
+
 @-webkit-keyframes dashone {
   to {
     stroke-dashoffset: 10000;
