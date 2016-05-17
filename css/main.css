@@ -25,40 +25,86 @@ html, body {
 	top: 15%;
 }
 
+#path0 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: visible;
+	animation: movedash 500s linear;
+}
+
 #path1 {
 	position: absolute;
 	left: 20%;
 	top: 15%;
 	visibility: hidden;
-  animation: dashone 500s linear;
+	animation: movedash 500s linear;
 }
 
 #path2 {
 	position: absolute;
 	left: 20%;
 	top: 15%;
-	visibility: visible;
-	animation: dashtwo 500s linear;
+	visibility: hidden;
+	animation: movedash 500s linear;
 }
 
-@keyframes dashone {
+#path3 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: hidden;
+	animation: movedash 500s linear;
+}
+
+#path4 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: hidden;
+	animation: movedash 500s linear;
+}
+
+#path5 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: hidden;
+	animation: movedash 500s linear;
+}
+
+#path6 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: hidden;
+	animation: movedash 500s linear;
+}
+
+#path7 {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: hidden;
+	animation: movedash 500s linear;
+}
+
+#pathcomplete {
+	position: absolute;
+	left: 20%;
+	top: 15%;
+	visibility: hidden;
+}
+
+
+@keyframes movedash {
   to {
     stroke-dashoffset: 10000;
   }
 }
 
-@keyframes dashtwo {
-  to {
-    stroke-dashoffset: 10000;
-  }
-
-@-webkit-keyframes dashone {
+@-webkit-keyframes movedash {
   to {
     stroke-dashoffset: 10000;
   }
 }
-
-@-webkit-keyframes dashtwo {
-  to {
-    stroke-dashoffset: 10000;
-  }

@@ -38,6 +38,8 @@ $(function() {
 	var toggle2 = 0;
 	var toggle3 = 0;
 
+	var gatestatus = 0;
+
 	path2.children[40].onMouseDown = function(event) {
 		
 		if (toggle1 == 0){
@@ -50,8 +52,8 @@ $(function() {
 			path2.children[40].segments[0].point.y -= 10;
 			toggle1 = 1 - toggle1;
 		}
-		emitGate1();
-		flowSwap();
+		switchGate();
+		// emitGate1();
 	}
 
 	path2.children[45].onMouseDown = function(event) {
@@ -66,6 +68,7 @@ $(function() {
 			path2.children[45].segments[0].point.y -= 10;
 			toggle2 = 1 - toggle2;
 		}
+		switchGate();
 	}
 
 	path2.children[49].onMouseDown = function(event) {
@@ -80,6 +83,113 @@ $(function() {
 			path2.children[49].segments[0].point.y -= 10;
 			toggle3 = 1 - toggle3;
 		}
+		switchGate();
+	}
+
+	function switchGate() {
+		
+		if (toggle1 == 0 && toggle2 == 0 && toggle3 == 0) {
+				gatestatus = 0;
+		} else if (toggle1 == 1 && toggle2 == 0 && toggle3 == 0) {
+				gatestatus = 1;
+		} else if (toggle1 == 1 && toggle2 == 1 && toggle3 == 0) {
+				gatestatus = 2;
+		} else if (toggle1 == 1 && toggle2 == 1 && toggle3 == 1) {
+				gatestatus = 3;
+		} else if (toggle1 == 1 && toggle2 == 0 && toggle3 == 1) {
+				gatestatus = 4;
+		} else if (toggle1 == 0 && toggle2 == 1 && toggle3 == 1) {
+				gatestatus = 5;
+		} else if (toggle1 == 0 && toggle2 == 1 && toggle3 == 0) {
+				gatestatus = 6;
+		} else if (toggle1 == 0 && toggle2 == 0 && toggle3 == 1) {
+				gatestatus = 7;
+		} 
+
+		switch (gatestatus) {
+			case 0:
+				$('#path0').css('visibility', 'visible');
+				$('#path1').css('visibility', 'hidden');
+				$('#path2').css('visibility', 'hidden');
+				$('#path3').css('visibility', 'hidden');
+				$('#path4').css('visibility', 'hidden');
+				$('#path5').css('visibility', 'hidden');
+				$('#path6').css('visibility', 'hidden');
+				$('#path7').css('visibility', 'hidden');
+				break;
+			case 1:
+				$('#path0').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'visible');
+				$('#path2').css('visibility', 'hidden');
+				$('#path3').css('visibility', 'hidden');
+				$('#path4').css('visibility', 'hidden');
+				$('#path5').css('visibility', 'hidden');
+				$('#path6').css('visibility', 'hidden');
+				$('#path7').css('visibility', 'hidden');
+				break;
+			case 2:
+				$('#path0').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'hidden');
+				$('#path2').css('visibility', 'visible');
+				$('#path3').css('visibility', 'hidden');
+				$('#path4').css('visibility', 'hidden');
+				$('#path5').css('visibility', 'hidden');
+				$('#path6').css('visibility', 'hidden');
+				$('#path7').css('visibility', 'hidden');
+				break;	
+			case 3:
+				$('#path0').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'hidden');
+				$('#path2').css('visibility', 'hidden');
+				$('#path3').css('visibility', 'visible');
+				$('#path4').css('visibility', 'hidden');
+				$('#path5').css('visibility', 'hidden');
+				$('#path6').css('visibility', 'hidden');
+				$('#path7').css('visibility', 'hidden'); 
+				break;
+			case 4:
+				$('#path0').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'hidden');
+				$('#path2').css('visibility', 'hidden');
+				$('#path3').css('visibility', 'hidden');
+				$('#path4').css('visibility', 'visible');
+				$('#path5').css('visibility', 'hidden');
+				$('#path6').css('visibility', 'hidden');
+				$('#path7').css('visibility', 'hidden'); 
+				break;	
+			case 5:
+				$('#path0').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'hidden');
+				$('#path2').css('visibility', 'hidden');
+				$('#path3').css('visibility', 'hidden');
+				$('#path4').css('visibility', 'hidden');
+				$('#path5').css('visibility', 'visible');
+				$('#path6').css('visibility', 'hidden');
+				$('#path7').css('visibility', 'hidden'); 
+				break;	
+			case 6:
+				$('#path0').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'hidden');
+				$('#path2').css('visibility', 'hidden');
+				$('#path3').css('visibility', 'hidden');
+				$('#path4').css('visibility', 'hidden');
+				$('#path5').css('visibility', 'hidden');
+				$('#path6').css('visibility', 'visible');
+				$('#path7').css('visibility', 'hidden');  
+				break;
+			case 7:
+				$('#path0').css('visibility', 'hidden');
+				$('#path1').css('visibility', 'hidden');
+				$('#path2').css('visibility', 'hidden');
+				$('#path3').css('visibility', 'hidden');
+				$('#path4').css('visibility', 'hidden');
+				$('#path5').css('visibility', 'hidden');
+				$('#path6').css('visibility', 'hidden');
+				$('#path7').css('visibility', 'visible'); 
+				break;
+		} 
+		paper.view.update();
+		console.log(gatestatus);
 	}
 
 	function onFrame(event) {
@@ -107,17 +217,6 @@ $(function() {
 				$('#path1').css('visibility', 'hidden');
 		}
 		paper.view.update();
-	}
-
-	function flowSwap() {
-		if (toggle1 == 1) {
-				$('#path2').css('visibility', 'hidden');
-				$('#path1').css('visibility', 'visible');
-		}
-		else {
-				$('#path2').css('visibility', 'visible');
-				$('#path1').css('visibility', 'hidden');
-		}
 	}
 
 	paper.view.update();
