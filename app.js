@@ -34,9 +34,15 @@ io.sockets.on('connection', function(client){
 	io.sockets.emit('newconnection'); 
 
 	client.on('mouseDownGate1', function(){
+		client.broadcast.emit('repeatToggleGate1');
+	}); 
 
-		client.broadcast.emit('repeatGate1');
+	client.on('mouseDownGate2', function(){
+		client.broadcast.emit('repeatToggleGate2');
+	}); 
 
+	client.on('mouseDownGate3', function(){
+		client.broadcast.emit('repeatToggleGate3');
 	}); 
 
 });
