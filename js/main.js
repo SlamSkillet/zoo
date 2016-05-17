@@ -106,7 +106,6 @@ $(function() {
 				$('#path2').css('visibility', 'visible');
 				$('#path1').css('visibility', 'hidden');
 		}
-
 		paper.view.update();
 	}
 
