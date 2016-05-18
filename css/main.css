@@ -21,108 +21,108 @@ html, body {
 
 #canvas {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 }
 
 #path0 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: visible;
 	animation: movedash 500s linear;
 }
 
 #path1 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 	animation: movedash 500s linear;
 }
 
 #path2 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 	animation: movedash 500s linear;
 }
 
 #path3 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 	animation: movedash 500s linear;
 }
 
 #path4 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 	animation: movedash 500s linear;
 }
 
 #path5 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 	animation: movedash 500s linear;
 }
 
 #path6 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 	animation: movedash 500s linear;
 }
 
 #path7 {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 	animation: movedash 500s linear;
 }
 
 #pathcomplete {
 	position: absolute;
-	left: 20%;
-	top: 15%;
+	left: calc(50vw - (0.5 * 300px));
+	top: calc(50vh - (0.5 * 500px));
 	visibility: hidden;
 }
 
 #gate1click {
 	position: absolute;
-	left: 10%;
-	top: 10%;
+	left: calc((50vw - (0.5 * 50px)) - 110px);
+	top: calc((50vh - (0.5 * 50px)) + 5px);
 	width: 50px;
 	height: 50px;
-	border: 1px solid green;
+
 	z-index: 2;
 }
 
 #gate2click {
 	position: absolute;
-	left: 40%;
-	top: 40%;
+	left: calc((50vw - (0.5 * 50px)) + 35px);
+	top: calc((50vh - (0.5 * 50px)) - 175px);
 	width: 50px;
 	height: 50px;
-	border: 1px solid green;
+
 	z-index: 2;
 }
 
 #gate3click {
 	position: absolute;
-	left: 80%;
-	top: 80%;
+	left: calc((50vw - (0.5 * 50px)) + 75px);
+	top: calc((50vh - (0.5 * 50px)) + 140px);
 	width: 50px;
 	height: 50px;
-	border: 1px solid green;
+
 	z-index: 2;
 }
 
