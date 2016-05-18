@@ -5,21 +5,17 @@ $(function() {
 	var socket = io.connect(window.location.href);
 
 	socket.on('newconnection', function() {
-	    console.log('New connection.');
 	});
 
 	socket.on('repeatToggleGate1', function() {
-		console.log('clientrotateGate1');
 		repeatToggleGate1();
 	}); 
 
 	socket.on('repeatToggleGate2', function() {
-		console.log('clientrotateGate2');
 		repeatToggleGate2();
 	}); 
 
 	socket.on('repeatToggleGate3', function() {
-		console.log('clientrotateGate3');
 		repeatToggleGate3();
 	}); 
 
@@ -242,7 +238,6 @@ $(function() {
 				break;
 		} 
 		paper.view.update();
-		console.log(gatestatus);
 	}
 
 	function onFrame(event) {
