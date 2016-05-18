@@ -94,58 +94,6 @@ $(function() {
 		paper.view.update();
 	});
 
-
-	path2.children[40].onMouseDown  = function(event) {
-		
-		if (toggle1 == 0){
-			path2.children[40].segments[0].point.x += 10;
-			path2.children[40].segments[0].point.y += 10;
-			toggle1 = 1 - toggle1;
-		}
-		else {
-			path2.children[40].segments[0].point.x -= 10;
-			path2.children[40].segments[0].point.y -= 10;
-			toggle1 = 1 - toggle1;
-		}
-		switchGate();
-		socket.emit('mouseDownGate1');
-		paper.view.update();
-	}
-
-	path2.children[45].onMouseDown = function(event) {
-		
-		if (toggle2 == 0){
-			path2.children[45].segments[0].point.x += 10;
-			path2.children[45].segments[0].point.y += 10;
-			toggle2 = 1 - toggle2;
-		}
-		else {
-			path2.children[45].segments[0].point.x -= 10;
-			path2.children[45].segments[0].point.y -= 10;
-			toggle2 = 1 - toggle2;
-		}
-		switchGate();
-		socket.emit('mouseDownGate2');
-		paper.view.update();
-	}
-
-	path2.children[49].onMouseDown = function(event) {
-		
-		if (toggle3 == 0){
-			path2.children[49].segments[0].point.x += 10;
-			path2.children[49].segments[0].point.y += 10;
-			toggle3 = 1 - toggle3;
-		}
-		else {
-			path2.children[49].segments[0].point.x -= 10;
-			path2.children[49].segments[0].point.y -= 10;
-			toggle3 = 1 - toggle3;
-		}
-		switchGate();
-		socket.emit('mouseDownGate3');
-		paper.view.update();
-	}
-
 	function repeatToggleGate1() {
 		if (toggle1 == 0){
 			path2.children[40].segments[0].point.x += 10;
