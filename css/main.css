@@ -96,6 +96,36 @@ html, body {
 	visibility: hidden;
 }
 
+#gate1click {
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+	z-index: 2;
+}
+
+#gate2click {
+	position: absolute;
+	left: 40%;
+	top: 40%;
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+	z-index: 2;
+}
+
+#gate3click {
+	position: absolute;
+	left: 80%;
+	top: 80%;
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+	z-index: 2;
+}
+
 
 @keyframes movedash {
   to {
