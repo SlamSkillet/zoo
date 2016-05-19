@@ -1,3 +1,3 @@
 Open the gates!
 
-zoo.slamskillet.com
+<a href="http://zoo.slamskillet.com">zoo.slamskillet.com</a>
